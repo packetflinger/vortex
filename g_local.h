@@ -37,6 +37,12 @@
 #define stricmp strcasecmp
 #endif
 
+#ifdef _WIN32
+#define SEP "\\"
+#else
+#define SEP "/"
+#endif
+
 #define max(a,b) (a < b ? b : a)
 #define min(a,b) (a < b ? a : b)f
 
