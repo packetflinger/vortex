@@ -144,6 +144,9 @@ armoryRune_t ComboRunes[ARMORY_MAX_RUNES];
 
 joined_t players[MAX_CLIENTS];
 
+const char *s1;
+const char *s2;
+
 cvar_t *gamedir;
 cvar_t *dm_monsters;
 cvar_t *pvm_respawntime;
