@@ -1905,9 +1905,10 @@ void VortexCheckClientSettings(edict_t *ent, int setting, int value)
 		return;
 	}
 
-	gi.bprintf(PRINT_HIGH, "%s attempted to use client settings not allowed by the server!\n", ent->client->pers.netname);
-	gi.bprintf(PRINT_HIGH, "%s was kicked\n", ent->client->pers.netname);
-	stuffcmd(ent, "disconnect\n");
+	// Unacceptable values are already fixed, no point to spamming and kicking the player
+	// gi.bprintf(PRINT_HIGH, "%s attempted to use client settings not allowed by the server!\n", ent->client->pers.netname);
+	// gi.bprintf(PRINT_HIGH, "%s was kicked\n", ent->client->pers.netname);
+	// stuffcmd(ent, "disconnect\n");
 }
 
 void Cmd_IdentifyPlayer (edict_t *ent)
