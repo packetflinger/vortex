@@ -256,6 +256,13 @@ void ShutdownGame (void)
 	gi.dprintf ("==== ShutdownGame ====\n");
 	gi.FreeTags (TAG_LEVEL);
 	gi.FreeTags (TAG_GAME);
+
+	// This is disgusting, but temporarily necessary while
+	// we figure out what is causing random game shutdowns.
+	//
+	// If we force a server quit, it can be automagically
+	// restarted (via script or systemd)
+	gi.AddCommandString("quit\n");
 }
 
 #ifndef _WINDOWS
